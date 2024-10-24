@@ -12,7 +12,6 @@ import { useRouter } from "next/navigation";
 
 const SignupForm = () => {
   const router = useRouter();
-  const { signupData } = useSelector((store) => store.auth);
 
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
@@ -66,26 +65,19 @@ const SignupForm = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("/api/send-otp", { email });
-      console.log("Form Data", formData);
-      console.log("Signup data before dispatch", signupData);
+      const formData = new FormData();
+      formData.append("firstName", firstName);
+      formData.append("lastName", lastName);
+      formData.append("email", email);
+      formData.append("password", password);
+      formData.append("accountType", accountType);
+      const response = await axios.post("/api/register", formData);
+
+      console.log("Response", response);
 
       if (response.status === 200) {
-        dispatch(
-          setSignupData({
-            firstName,
-            lastName,
-            email,
-            password,
-            confirmPassword,
-            accountType,
-          })
-        );
-        console.log("Signup Data after dispatch", signupData);
-        toast.success("OTP sent to your email");
-        router.push("/register/verify-email");
-      } else {
-        toast.error("Failed to send OTP. Try again later.");
+        toast.success("Account created successfully. Wait for admin approval");
+        router.push("/login");
       }
     } catch (error) {
       toast.error("An error occurred. Please try again.");
@@ -120,9 +112,8 @@ const SignupForm = () => {
   ];
 
   return (
-    <div>
+    <div className="mt-4">
       {/* Tab */}
-      <Tab tabData={tabData} field={accountType} setField={setAccountType} />
 
       {/* Form */}
       <form onSubmit={handleOnSubmit} className="flex w-full flex-col gap-y-4">

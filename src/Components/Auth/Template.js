@@ -1,4 +1,5 @@
 // import LoginForm from "./LoginForm";
+import LoginForm from "./LoginForm";
 import SignupForm from "./SignupForm";
 
 function Template({ title, description1, description2, formType }) {
@@ -21,8 +22,8 @@ function Template({ title, description1, description2, formType }) {
                 {description2}
               </span>
             </p>
-            <SignupForm />
-            {/* {formType === "register" ? <SignupForm /> : <LoginForm />} */}
+
+            {formType === "register" ? <SignupForm /> : <LoginForm />}
           </div>
         </div>
       )}

@@ -43,7 +43,13 @@
     "src/utils/roles.js",
     "src/Components/Auth/SignupForm.jsx",
     "src/Components/Auth/Tab.jsx",
-    "src/app/AuthProvider.js"
-  ],
+    "src/app/AuthProvider.js",
+    "src/lib/DBconnect.js",
+    "src/lib/cloudinary.js",
+    "src/model/User.js",
+    "src/model/Profile.js",
+    "src/model/Category.js",
+    "src/Components/Auth/LoginForm.jsx"
+, "src/utils/middleware.js", "src/app/api/auth/[...nextauth]/route.js"  ],
   "exclude": ["node_modules"]
 }
