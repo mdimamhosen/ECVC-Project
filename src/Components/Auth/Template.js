@@ -7,7 +7,7 @@ function Template({ title, description1, description2, formType }) {
   const loading = false;
 
   return (
-    <div className="grid min-h-[calc(100vh-3.5rem)] bg-slate-900 place-items-center">
+    <div className="grid min-h-[100vh] bg-slate-900 place-items-center">
       {loading ? (
         <div className="spinner"></div>
       ) : (

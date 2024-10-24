@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       >
         <AuthProvider>
           <Providers>
-            <Navbar />
+            {/* <Navbar /> */}
             <Toaster />
             {children}
           </Providers>
