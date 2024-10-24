@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/app/not-found.js",
+    "src/Components/Core/CTAButton.js",
+    "src/Components/About/Quote.js",
+    "src/Components/About/StartsComponent.js",
+    "src/Components/About/LearningGrid.js",
+    "src/Components/Contact/ContactUsForm .js",
+    "src/Components/Contact/ContactMap.js",
+    "src/Components/Contact/ContactForm.js",
+    "src/Components/Contact/ContactDetails.js",
+    "src/app/contact/page.js"
+  ],
+  "exclude": ["node_modules"]
+}
