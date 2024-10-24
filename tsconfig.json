@@ -33,7 +33,17 @@
     "src/Components/Contact/ContactMap.js",
     "src/Components/Contact/ContactForm.js",
     "src/Components/Contact/ContactDetails.js",
-    "src/app/contact/page.js"
+    "src/app/contact/page.js",
+    "src/Components/Auth/Template.js",
+    "src/redux/slices/profileSlice.js",
+    "src/redux/slices/authSclice.js",
+    "src/redux/reducer/index.js",
+    "src/redux/providers/provider.jsx",
+    "src/redux/hooks/hooks.js",
+    "src/utils/roles.js",
+    "src/Components/Auth/SignupForm.jsx",
+    "src/Components/Auth/Tab.jsx",
+    "src/app/AuthProvider.js"
   ],
   "exclude": ["node_modules"]
 }
